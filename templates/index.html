@@ -4,52 +4,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Senator Contact Info</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_root.css') }}">
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    <div>
-    <h1>Step1:</h1>
-    <p>
-    Understand the issue
-    <br>
-    <a href="https://www.nbcnews.com/nbc-out/out-politics-and-policy/house-passes-tax-bill-bans-medicaid-covering-transition-related-care-rcna208618">News coverage</a>
-    <br>
-    <a href="https://www.congress.gov/bill/119th-congress/house-bill/1/text">The bill itself</a>
-    <br>
-    </p>
 
-    <h1>Step2:</h1>
-    <p>
-    Select your state
-    </p>
-    <select id="stateDropdown" onchange="fetchSenators()">
-        <option value="">-- Select a State --</option>
-    </select>
+    <div class="container">
+        <h1>Step1:</h1>
+            <p>
+            Understand the issue
+            <br>
+            <a href="https://www.nbcnews.com/nbc-out/out-politics-and-policy/house-passes-tax-bill-bans-medicaid-covering-transition-related-care-rcna208618">News coverage</a>
+            <br>
+            <a href="https://www.congress.gov/bill/119th-congress/house-bill/1/text">The bill itself</a>
+            <br>
+            </p>
 
-    <div id="results"></div>
-    <script src="{{ url_for('static', filename='app.js') }}"></script>
+        <h1>Step2:</h1>
+            <p>
+            Select your state
+            </p>
+            <select id="stateDropdown" onchange="fetchSenators()">
+                <option value="">-- Select a State --</option>
+            </select>
 
-    <h1>Step3:</h1>
-    <p>
-    Call both of your senators and read the following three sentences:
-    </p>
-    <p>
-    <q>
-    I would like to leave a message for senator {senator name} regarding the H.R.1 bill. 
-In support of hundreds of thousands of adult transgender Americans, who would lose access to medication, I strongly urge the senator to vote against H.R.1. This bill was given overreaching powers by the House of Representatives and now it is up to you to stop it. 
-    <br>
-Thank you.
-    </q>
+            <div id="results"></div>
+            <script src="{{ url_for('static', filename='app.js') }}"></script>
 
-    </p>
-
-    <h1>Step4:</h1>
-    <p>
-    Set a calendar reminder to do this again tomorrow. 
-    </p>
+            <h1>Step3:</h1>
+            <p>
+            Call both of your senators and read the following three sentences:
+            </p>
+            <p>
+            <q>
+            I would like to leave a message for the senator regarding bill H.R.1.<br>In support of hundreds of thousands
+            of adult transgender Americans, who would be in jepordy of losing access to medication, I strongly urge the senator to vote against H.R.1. This bill was given overreaching powers by the House of Representatives and now it is up to you to stop it. <br><br>Thank you.
+            </q>
+            </p>
 
 
+        <h1>Step4:</h1>
+            <p>
+            Set a calendar reminder to do this again tomorrow.<br>Bonus points if you also click on the contact link
+            above and send them an email. 
+            </p>
     <div>
 </body>
 </html>
