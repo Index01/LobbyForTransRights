@@ -32,5 +32,5 @@ def get_senators():
     return jsonify(filtered.to_dict(orient='records'))
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5555)
+    app.run(debug=True, host='0.0.0.0', port=5555)
 
